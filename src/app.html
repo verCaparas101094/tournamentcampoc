@@ -1,4 +1,4 @@
-<aside class="sidebar"><a class="brand" href="/">◉ <span>tournament<span class="lime">cam</span><small>THE COURTSIDE COMPANION</small></span></a><div class="workspace">YOUR WORKSPACE</div><nav>@for(tab of tabs;track tab){<button [class.current]="page===tab" (click)="page=tab">{{tab==='Record'?'◉':tab==='Match library'?'▤':tab==='Camera setup'?'⌖':'☷'}} <span>{{tab}}</span></button>}</nav><div class="sidebar-bottom"><span class="status-dot" [class.online]="connected()"></span> {{connected()?'Recording server online':'Server offline'}}<p>Made for the moments<br>you want to play again.</p><small>TOURNAMENTCAM / 01</small></div></aside>
+<!-- <aside class="sidebar"><a class="brand" href="/">◉ <span>tournament<span class="lime">cam</span><small>THE COURTSIDE COMPANION</small></span></a><div class="workspace">YOUR WORKSPACE</div><nav>@for(tab of tabs;track tab){<button [class.current]="page===tab" (click)="page=tab">{{tab==='Record'?'◉':tab==='Match library'?'▤':tab==='Camera setup'?'⌖':'☷'}} <span>{{tab}}</span></button>}</nav><div class="sidebar-bottom"><span class="status-dot" [class.online]="connected()"></span> {{connected()?'Recording server online':'Server offline'}}<p>Made for the moments<br>you want to play again.</p><small>TOURNAMENTCAM / 01</small></div></aside>
 <main><header><span>YOUR COURT. YOUR GAME.</span><div class="header-right"><span class="pill">● PICKLEBALL</span><span class="avatar">TC</span></div></header>
 @if(message()){<div class="notice" role="status">{{message()}}<button aria-label="Dismiss notification" (click)="message.set('')">×</button></div>}
 @if(page==='Record'){
@@ -15,4 +15,10 @@
 @if(selected();as m){<div class="modal-backdrop"><section class="modal" role="dialog" aria-modal="true" aria-label="Match replay"><div class="panel-head"><h2>{{m.title}}</h2><button class="secondary" (click)="selected.set(null);playback.set('')">Close ×</button></div><video #player controls playsinline [src]="playback()"></video><div class="replay-tools"><label>Playback speed<select (change)="player.playbackRate=+$any($event.target).value"><option value="0.25">0.25×</option><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="1.5">1.5×</option><option value="2">2×</option></select></label><button class="secondary" (click)="download(m)">↓ Download</button><button class="primary" (click)="share(m)">Share ↗</button><button class="secondary" (click)="revoke(m)">Revoke links</button></div>@if(shareUrl()){<div class="replay-tools"><input readonly aria-label="Replay share link" [value]="shareUrl()"><button (click)="copy()">Copy link</button></div>}<div class="moments">@for(mark of m.marks;track $index){<button class="secondary" (click)="seek(mark.time)">{{time(mark.time)}} · {{mark.label}}</button>}@empty{<p>No moments marked for this match.</p>}</div></section></div>}
 
 
+ -->
 
+<div style="text-align:center; margin-top:100px; font-family:Arial;">
+  <h1>🚧 Site Under Maintenance</h1>
+  <p>Our Pickleball Recording App is temporarily unavailable.</p>
+  <p>We'll be back soon!</p>
+</div>
