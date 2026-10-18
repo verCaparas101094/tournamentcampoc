@@ -1,5 +1,11 @@
 # TournamentCam
 
+## Current access: public camera testing, protected full application
+
+Open `/nvr-test` without an application password for connection setup and test recording/replay/download. Its restricted `/test-api` routes cannot list, play or stop regular matches, upload browser recordings or create sharing links. All full-app features remain at `/app`; sign in through `/` or `/main-login`. The main `/api` routes require a server login session. The owner-supplied password is configured as a salted hash in the private `.env` file. See [Dahua test setup manual](docs/NVR-TEST-SETUP.md). NVR settings supplied through the test form are global to the server and held in memory until restart. FFmpeg is provided by `ffmpeg-static`. Offline service-worker registration is temporarily disabled during testing mode.
+
+The previous operator-key-only authentication description below is superseded by session authentication in testing mode. Existing bearer share links retain their original expiry and revocation behavior.
+
 Angular PWA for recording pickleball matches, replaying moments and sharing expiring watch links. Built from the supplied match-recap and elevated baseline camera references. No reference image is represented as a live camera feed.
 
 ## Run

@@ -45,4 +45,4 @@ class App {
  async revoke(m:Match){try{await this.api('/matches/'+m.id+'/share',{method:'DELETE'});this.shareUrl.set('');this.message.set('All shared links for this match revoked.');}catch(e){this.error(e);}}
  error(e:unknown){this.message.set(e instanceof Error?e.message:String(e));}
 }
-bootstrapApplication(App,{providers:[provideServiceWorker('ngsw-worker.js',{enabled:location.port!=='4200',registrationStrategy:'registerWhenStable:30000'})]}).catch(console.error);
+bootstrapApplication(App,{providers:[provideServiceWorker('ngsw-worker.js',{enabled:false,registrationStrategy:'registerWhenStable:30000'})]}).catch(console.error);

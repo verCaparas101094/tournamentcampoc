@@ -1,0 +1,19 @@
+# Node Web Service, not a Static Site. Configure secrets in Render.
+services:
+  - type: web
+    name: tournamentcam
+    runtime: node
+    buildCommand: npm ci --include=dev && npm run build
+    startCommand: npm run server
+    healthCheckPath: /auth/status
+    envVars:
+      - key: NODE_VERSION
+        value: 24.19.0
+      - key: HOST
+        value: 0.0.0.0
+      - key: COOKIE_SECURE
+        value: "true"
+      - key: ACCESS_PASSWORD
+        sync: false
+      - key: PUBLIC_ORIGIN
+        sync: false

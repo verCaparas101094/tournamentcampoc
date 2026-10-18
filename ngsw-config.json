@@ -1,1 +1,1 @@
-{"index":"/index.html","assetGroups":[{"name":"shell","installMode":"prefetch","resources":{"files":["/index.html","/*.css","/*.js","/*.svg","/*.png","/manifest.webmanifest"]}}],"navigationUrls":["/**","!/api/**","!/media/**","!/watch/**"]}
+{"index":"/index.html","assetGroups":[{"name":"shell","installMode":"prefetch","resources":{"files":["/*.css","/*.js","/*.svg","/*.png","/manifest.webmanifest"]}}],"navigationUrls":[]}
